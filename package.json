@@ -1,0 +1,40 @@
+{
+  "name": "lab3apis",
+  "version": "1.0.0",
+  "description": "��#\u0000 \u0000L\u0000A\u0000B\u00003\u0000A\u0000P\u0000I\u0000S\u0000\r\u0000 \u0000",
+  "main": "index.ts",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --mode=production",
+    "start": "webpack serve --mode=development",
+    "lint": "eslint src/ --ext .ts,.js --report-unused-disable-directives",
+    "lint:fix": "eslint src/ --ext .ts,.js --report-unused-disable-directives --fix",
+    "prepare": "husky"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Danamelisa-g/LAB3APIS.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Danamelisa-g/LAB3APIS/issues"
+  },
+  "homepage": "https://github.com/Danamelisa-g/LAB3APIS#readme",
+  "devDependencies": {
+    "@eslint/js": "^9.24.0",
+    "eslint": "^9.24.0",
+    "eslit": "^6.0.0",
+    "globals": "^16.0.0",
+    "husky": "^9.1.7",
+    "ts-loader": "^9.5.2",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3",
+    "typescript-eslint": "^8.29.1",
+    "webpack": "^5.99.5",
+    "webpack-cli": "^6.0.1",
+    "webpack-dev-server": "^5.2.1"
+  }
+}
