@@ -1,3 +1,5 @@
+
+
 function getCharecterFromDisneyApi() {
     return fetch('https://api.disneyapi.dev/character')
       .then((res) => {
