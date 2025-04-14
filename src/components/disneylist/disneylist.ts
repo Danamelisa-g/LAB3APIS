@@ -40,7 +40,7 @@ export class Disneylist extends HTMLElement {
                     
             .container {
                 padding: 20px;
-                background-color: #f5f5f7;
+                background-color:rgb(0, 166, 255);
                 min-height: 100vh;
                 font-family: 'Montserrat', sans-serif;
             }
@@ -53,7 +53,7 @@ export class Disneylist extends HTMLElement {
             }
                     
             .character-card {
-                background: linear-gradient(145deg, #ffffff, #f0f0f0);
+                background: linear-gradient(145deg,rgb(214, 152, 240));
                 border-radius: 16px;
                 padding: 20px;
                 text-align: center;
