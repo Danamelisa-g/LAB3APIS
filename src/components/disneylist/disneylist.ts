@@ -25,33 +25,51 @@ export class Disneylist extends HTMLElement {
     async connectedCallback(){
         try {
             if(this.shadowRoot){
+                this.shadowRoot.innerHTML = `<p>Loading Disney characters...</p>`;
                 
             }
             const response = await getCharacterFromDisneyApi();
             if(this.shadowRoot){
                 this.shadowRoot.innerHTML=`
                 <style>
-            .characters-grid {
-              display: grid;
-              grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-              gap: 20px;
+            {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
             }
-            
+                    
+            .container {
+                padding: 20px;
+                background-color: #f5f5f7;
+                min-height: 100vh;
+                font-family: 'Montserrat', sans-serif;
+            }
+                    
+             .characters-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+                gap: 25px;
+                padding: 20px 0;
+            }
+                    
             .character-card {
-              border: 1px solid #ccc;
-              border-radius: 8px;
-              padding: 15px;
-              text-align: center;
-              cursor: pointer;
-              transition: transform 0.2s;
+                background: linear-gradient(145deg, #ffffff, #f0f0f0);
+                border-radius: 16px;
+                padding: 20px;
+                text-align: center;
+                cursor: pointer;
+                transition: all 0.3s ease;
+                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+                overflow: hidden;
+                position: relative;
+                border: none;
             }
-            
+                    
             .character-card:hover {
-              transform: scale(1.05);
-              box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-            }
-            
-            .character-image {
+                transform: translateY(-10px);
+                box-shadow: 0 15px 30px rgba(224, 0, 157, 0.15);
+             }
+           .character-image {
               width: 100%;
               height: 200px;
               object-fit: cover;
@@ -64,7 +82,7 @@ export class Disneylist extends HTMLElement {
               font-family: 'Arial', sans-serif;
             }
             .view-button{
-            
+            color:rgb(194, 0, 224);
             color:black;
             border-radius:4px
             padding 8px 12px
@@ -114,6 +132,7 @@ export class Disneylist extends HTMLElement {
     } catch (error) {
       console.error('Error loading Disney characters:', error);
       if (this.shadowRoot) {
+        this.shadowRoot.innerHTML = `<p>Error loading Disney characters. Please try again later.</p>`;
         
       }
     }
